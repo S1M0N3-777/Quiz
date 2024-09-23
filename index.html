@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+       alert("Ciao, benvenuto nel mio quiz") 
+       let nome = prompt("Come ti chiami?")
+       while(nome === null){ 
+            alert("Ei, Inserisci il tuo nome perfavore")
+            nome = prompt("Inserisci il tuo nome")
+        }
+       alert("Perfetto "+nome+" Iniziamo!")
+
+        let n = 0
+       let domanda = prompt("Domanda n."+n+"Qual è la capitale dell'italia?").toLocaleLowerCase()
+       if(domanda==="roma"){
+        n=n+1
+        alert(n)
+       }
+    </script>
+</body>
+</html>
