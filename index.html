@@ -14,14 +14,38 @@
             alert("Ei, Inserisci il tuo nome perfavore")
             nome = prompt("Inserisci il tuo nome")
         }
-       alert("Perfetto "+nome+" Iniziamo!")
+       alert("Perfetto "+nome+" Iniziamo!, se non sai la risposta premi semplicemente invio ;)")
 
-        let n = 0
-       let domanda = prompt("Domanda n."+n+"Qual è la capitale dell'italia?").toLocaleLowerCase()
+        let n = 1
+        let punti = 0
+       let domanda = prompt("Domanda n."+n+" Qual è la capitale dell'italia").toLowerCase()
+       n=n+1
        if(domanda==="roma"){
-        n=n+1
-        alert(n)
+        punti=punti+1
        }
+        domanda = prompt("Domanda n."+n+" Qual è il fiume più lungo d'Italia?").toLowerCase()
+        n=n+1
+       if(domanda==="po"){
+        punti=punti+1
+       }
+        domanda = prompt("Domanda n."+n+" Chi è il presidente della Repubblica?").toLowerCase()
+        n=n+1
+       if(domanda==="mattarella"){
+        punti=punti+1
+       }
+       domanda = prompt("Domanda n."+n+" In quale episodio della saga di Star Wars, Darth Vader dice a Luke la celebre frase 'Io sono tuo padre'? (Rispondere in numeri romani)").toLowerCase()
+        n=n+1
+       if(domanda==="v"){
+        punti=punti+1
+       }
+       domanda = prompt("Domanda n."+n+" In quale regione si trova Torino?").toLowerCase()
+        n=n+1
+       if(domanda==="piemonte"){
+        punti=punti+1
+       }
+
+       alert("Quiz completato, andiamo ai risultati")
+       alert(nome+" Hai totalizzato un punteggio di: "+punti+"/5")
     </script>
 </body>
 </html>
