@@ -18,34 +18,36 @@
 
         let n = 1
         let punti = 0
-       let domanda = prompt("Domanda n."+n+" Qual è la capitale dell'italia").toLowerCase()
+        let domanda = prompt("Domanda n."+n+"\nCome è morto il protagonista di Red Dead Redemption 2 Arthur Morgan?:\n1.Tubercolosi\n2.Influenza\n3.In uno scontro a fuoco")
        n=n+1
-       if(domanda==="roma"){
+       if(domanda==="1"){
         punti=punti+1
        }
-        domanda = prompt("Domanda n."+n+" Qual è il fiume più lungo d'Italia?").toLowerCase()
+        domanda = prompt("Domanda n."+n+"\nQual è il fiume più lungo d'Italia?").toLowerCase()
         n=n+1
        if(domanda==="po"){
         punti=punti+1
        }
-        domanda = prompt("Domanda n."+n+" Chi è il presidente della Repubblica?").toLowerCase()
+        domanda = prompt("Domanda n."+n+"\nQuale tecnica è più efficace per prendere l'highround su fortnite?\n1.90s\n2.Pavimento scala muro\n3.Backwords Double Ramp edit")
         n=n+1
-       if(domanda==="mattarella"){
+       if(domanda==="3"){
         punti=punti+1
        }
-       domanda = prompt("Domanda n."+n+" In quale episodio della saga di Star Wars, Darth Vader dice a Luke la celebre frase 'Io sono tuo padre'? (Rispondere in numeri romani)").toLowerCase()
+       domanda = prompt("Domanda n."+n+"\nIn quale episodio della saga di Star Wars, Darth Vader dice a Luke la celebre frase 'Io sono tuo padre'? (Rispondere in numeri romani)").toLowerCase()
         n=n+1
        if(domanda==="v"){
         punti=punti+1
        }
-       domanda = prompt("Domanda n."+n+" In quale regione si trova Torino?").toLowerCase()
+       domanda = prompt("Domanda n."+n+" \nQuale ordine dei rank su brawl stars è corretto?\n1.Bronzo-Oro-Argento-Mito-Diamante-Campione-Leggenda\n2.Bronzo-Argento-Oro-Diamante-Mito-Leggenda-Campione\n3.Plastica-Legno-Rame-Ferro-Tungsteno")
         n=n+1
-       if(domanda==="piemonte"){
+       if(domanda==="2"){
         punti=punti+1
        }
 
        alert("Quiz completato, andiamo ai risultati")
-       alert(nome+" Hai totalizzato un punteggio di: "+punti+"/5")
+       let percent = 0
+       percent = (punti/5)*100
+       alert(nome+" Hai totalizzato un punteggio di: "+punti+"/5\n"+percent+"% di risposte corrette")
     </script>
 </body>
 </html>
