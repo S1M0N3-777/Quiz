@@ -18,28 +18,48 @@
 
         let n = 1
         let punti = 0
-        let domanda = prompt("Domanda n."+n+"\nCome è morto il protagonista di Red Dead Redemption 2 Arthur Morgan?:\n1.Tubercolosi\n2.Influenza\n3.In uno scontro a fuoco")
+        let domanda = prompt("Domanda n."+n+"\nCome è morto il protagonista di Red Dead Redemption 2 Arthur Morgan?:\n1.Tubercolosi\n2.Influenza\n3.In uno scontro a fuoco").toLowerCase().trim()
        n=n+1
-       if(domanda==="1"){
+       while(domanda === null){ 
+            alert("Ei, rispondi alla domanda perfavore")
+            let domanda = prompt("Domanda n."+n+"\nCome è morto il protagonista di Red Dead Redemption 2 Arthur Morgan?:\n1.Tubercolosi\n2.Influenza\n3.In uno scontro a fuoco").toLowercase().trim()
+
+       }
+       if(domanda==="tubercolosi"){
         punti=punti+1
        }
-        domanda = prompt("Domanda n."+n+"\nQual è il fiume più lungo d'Italia?").toLowerCase()
+        domanda = prompt("Domanda n."+n+"\nQual è il fiume più lungo d'Italia?").toLowerCase().trim()
         n=n+1
+        
        if(domanda==="po"){
         punti=punti+1
        }
-        domanda = prompt("Domanda n."+n+"\nQuale tecnica è più efficace per prendere l'highround su fortnite?\n1.90s\n2.Pavimento scala muro\n3.Backwords Double Ramp edit")
+        domanda = prompt("Domanda n."+n+"\nQuale tecnica è più efficace per prendere l'highround su fortnite?\n1.90s\n2.Pavimento scala muro\n3.Backwords Double Ramp edit").trim()
         n=n+1
+        while(domanda === null){ 
+            alert("Ei, rispondi alla domanda perfavore")
+            domanda = prompt("Domanda n."+n+"\nQuale tecnica è più efficace per prendere l'highround su fortnite?\n1.90s\n2.Pavimento scala muro\n3.Backwords Double Ramp edit").trim()
+        }
        if(domanda==="3"){
         punti=punti+1
        }
-       domanda = prompt("Domanda n."+n+"\nIn quale episodio della saga di Star Wars, Darth Vader dice a Luke la celebre frase 'Io sono tuo padre'? (Rispondere in numeri romani)").toLowerCase()
+       domanda = prompt("Domanda n."+n+"\nIn quale episodio della saga di Star Wars, Darth Vader dice a Luke la celebre frase 'Io sono tuo padre'? (Rispondere in numeri romani)").toLowerCase().trim()
         n=n+1
+        while(domanda === null){ 
+            alert("Ei, rispondi alla domanda perfavore")
+            domanda = prompt("Domanda n."+n+"\nIn quale episodio della saga di Star Wars, Darth Vader dice a Luke la celebre frase 'Io sono tuo padre'? (Rispondere in numeri romani)").toLowerCase().trim()
+
+        }
        if(domanda==="v"){
         punti=punti+1
        }
        domanda = prompt("Domanda n."+n+" \nQuale ordine dei rank su brawl stars è corretto?\n1.Bronzo-Oro-Argento-Mito-Diamante-Campione-Leggenda\n2.Bronzo-Argento-Oro-Diamante-Mito-Leggenda-Campione\n3.Plastica-Legno-Rame-Ferro-Tungsteno")
         n=n+1
+        while(domanda === null){ 
+            alert("Ei, rispondi alla domanda perfavore")
+            domanda = prompt("Domanda n."+n+" \nQuale ordine dei rank su brawl stars è corretto?\n1.Bronzo-Oro-Argento-Mito-Diamante-Campione-Leggenda\n2.Bronzo-Argento-Oro-Diamante-Mito-Leggenda-Campione\n3.Plastica-Legno-Rame-Ferro-Tungsteno").trim()
+
+        }
        if(domanda==="2"){
         punti=punti+1
        }
