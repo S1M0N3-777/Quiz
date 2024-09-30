@@ -6,68 +6,109 @@
     <title>Document</title>
 </head>
 <body>
-    
     <script>
-       alert("Ciao, benvenuto nel mio quiz") 
-       let nome = prompt("Come ti chiami?")
-       while(nome === null){ 
-            alert("Ei, Inserisci il tuo nome perfavore")
-            nome = prompt("Inserisci il tuo nome")
+       /*
+       riscrivere il codice
+        2-Usare una funzione per il sanitize dell'input
+        3-Usare una funzione per il calcolo percentuale
+        */
+       
+        function sanitize(domanda){
+            domanda = domanda.toLowerCase().trim()
+            return domanda
         }
-       alert("Perfetto "+nome+" Iniziamo!, se non sai la risposta premi semplicemente invio ;)")
 
-        let n = 1
+        function sanitize2(domanda){
+            domanda = domanda.trim()
+            return domanda
+        }
+
+        function percentage(punti){
+            let percentuale = 0
+            percentuale = (punti/5)*100
+            return percentuale
+
+        }
+  
+        alert("Iniziamo, il quiz")
+        let n=1
         let punti = 0
-        let domanda = prompt("Domanda n."+n+"\nCome è morto il protagonista di Red Dead Redemption 2 Arthur Morgan?:\n1.Tubercolosi\n2.Influenza\n3.In uno scontro a fuoco").toLowerCase().trim()
-       n=n+1
-       while(domanda === null){ 
-            alert("Ei, rispondi alla domanda perfavore")
-            let domanda = prompt("Domanda n."+n+"\nCome è morto il protagonista di Red Dead Redemption 2 Arthur Morgan?:\n1.Tubercolosi\n2.Influenza\n3.In uno scontro a fuoco").toLowercase().trim()
-
-       }
-       if(domanda==="tubercolosi"){
-        punti=punti+1
-       }
-        domanda = prompt("Domanda n."+n+"\nQual è il fiume più lungo d'Italia?").toLowerCase().trim()
+        let domanda = prompt("Domanda n."+n+"\nCome è morto il protagonista di Red Dead Redemption 2 Arthur Morgan?:\n1.Tubercolosi\n2.Influenza\n3.In uno scontro a fuoco")
         n=n+1
+        domanda = sanitize(domanda)
+        console.log(domanda)
+        while(domanda===null){
+            alert("Compila il campo!")
+            domanda = prompt("Domanda n."+n+"\nCome è morto il protagonista di Red Dead Redemption 2 Arthur Morgan?:\n1.Tubercolosi\n2.Influenza\n3.In uno scontro a fuoco")
+            domanda= sanitize(domanda)
+        }
+        if(domanda==="tubercolosi"){
+            punti=punti+1
+        }
+
+        domanda = prompt("Domanda n."+n+"\nQual è il fiume più lungo d'Italia?")
+        n=n+1
+        domanda = sanitize(domanda)
+        while(domanda===null){
+            alert("Compila il campo!")
+            domanda = prompt("Domanda n."+n+"\nQual è il fiume più lungo d'Italia?")
+            domanda= sanitize(domanda)
+        }
+        if(domanda==="po"){
+            punti=punti+1
+        }
+
+        domanda = prompt("Domanda n."+n+"\nQuale tecnica è più efficace per prendere l'highround su fortnite?\n1.90s\n2.Pavimento scala muro\n3.Backwords Double Ramp edit")
+        n=n+1
+        domanda = sanitize2(domanda)
+        while(domanda===null){
+            alert("Compila il campo!")
+            domanda = prompt("Domanda n."+n+"\nQuale tecnica è più efficace per prendere l'highround su fortnite?\n1.90s\n2.Pavimento scala muro\n3.Backwords Double Ramp edit")
+            domanda= sanitize(domanda)
+        }
+        if(domanda==="3"){
+            punti=punti+1
+        }
+
         
-       if(domanda==="po"){
-        punti=punti+1
-       }
-        domanda = prompt("Domanda n."+n+"\nQuale tecnica è più efficace per prendere l'highround su fortnite?\n1.90s\n2.Pavimento scala muro\n3.Backwords Double Ramp edit").trim()
+        
+        domanda = prompt("Domanda n."+n+"\nIn quale episodio della saga di Star Wars, Darth Vader dice a Luke la celebre frase 'Io sono tuo padre'? (Rispondere in numeri romani)")
         n=n+1
-        while(domanda === null){ 
-            alert("Ei, rispondi alla domanda perfavore")
-            domanda = prompt("Domanda n."+n+"\nQuale tecnica è più efficace per prendere l'highround su fortnite?\n1.90s\n2.Pavimento scala muro\n3.Backwords Double Ramp edit").trim()
+        domanda = sanitize(domanda)
+        while(domanda===null){
+            alert("Compila il campo!")
+            domanda = prompt("Domanda n."+n+"\nIn quale episodio della saga di Star Wars, Darth Vader dice a Luke la celebre frase 'Io sono tuo padre'? (Rispondere in numeri romani)")
+            domanda= sanitize(domanda)
         }
-       if(domanda==="3"){
-        punti=punti+1
-       }
-       domanda = prompt("Domanda n."+n+"\nIn quale episodio della saga di Star Wars, Darth Vader dice a Luke la celebre frase 'Io sono tuo padre'? (Rispondere in numeri romani)").toLowerCase().trim()
+        if(domanda==="v"){
+            punti=punti+1
+        }
+
+        domanda = prompt("Domanda n."+n+" \nQuale ordine dei rank su brawl stars è corretto?\n1.Bronzo-Oro-Argento-Mito-Diamante-Campione-Leggenda\n2.Bronzo-Argento-Oro-Diamante-Mito-Leggenda-Campione\n3.Plastica-Legno-Rame-Ferro-Tungsteno")
         n=n+1
-        while(domanda === null){ 
-            alert("Ei, rispondi alla domanda perfavore")
-            domanda = prompt("Domanda n."+n+"\nIn quale episodio della saga di Star Wars, Darth Vader dice a Luke la celebre frase 'Io sono tuo padre'? (Rispondere in numeri romani)").toLowerCase().trim()
-
+        domanda = sanitize2(domanda)
+        while(domanda===null){
+            alert("Compila il campo!")
+            domanda = prompt("Domanda n."+n+" \nQuale ordine dei rank su brawl stars è corretto?\n1.Bronzo-Oro-Argento-Mito-Diamante-Campione-Leggenda\n2.Bronzo-Argento-Oro-Diamante-Mito-Leggenda-Campione\n3.Plastica-Legno-Rame-Ferro-Tungsteno")
+            domanda= sanitize2(domanda)
         }
-       if(domanda==="v"){
-        punti=punti+1
-       }
-       domanda = prompt("Domanda n."+n+" \nQuale ordine dei rank su brawl stars è corretto?\n1.Bronzo-Oro-Argento-Mito-Diamante-Campione-Leggenda\n2.Bronzo-Argento-Oro-Diamante-Mito-Leggenda-Campione\n3.Plastica-Legno-Rame-Ferro-Tungsteno")
-        n=n+1
-        while(domanda === null){ 
-            alert("Ei, rispondi alla domanda perfavore")
-            domanda = prompt("Domanda n."+n+" \nQuale ordine dei rank su brawl stars è corretto?\n1.Bronzo-Oro-Argento-Mito-Diamante-Campione-Leggenda\n2.Bronzo-Argento-Oro-Diamante-Mito-Leggenda-Campione\n3.Plastica-Legno-Rame-Ferro-Tungsteno").trim()
-
+        if(domanda==="2"){
+            punti=punti+1
         }
-       if(domanda==="2"){
-        punti=punti+1
-       }
 
-       alert("Quiz completato, andiamo ai risultati")
-       let percent = 0
-       percent = (punti/5)*100
-       alert(nome+" Hai totalizzato un punteggio di: "+punti+"/5\n"+percent+"% di risposte corrette")
+        alert("Andiamo ai risultati")
+        let percent = percentage(punti)
+        alert("Hai totalizzato un punteggio di "+punti+"/5\n"+percent+"%")
+
+
+
+
+
+        
+        
+        
+
+    
     </script>
 </body>
 </html>
